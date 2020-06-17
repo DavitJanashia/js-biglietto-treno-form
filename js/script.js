@@ -28,14 +28,72 @@ if (eta == 'minorenne'){
   console.log(prezzoTotale);
 }
 
-// bottoni
+//bottoni: versione  con add/remove dei classi
+// var btnCrea = document.getElementById('my-create');
+// btnCrea.addEventListener('click', function () {
+//   console.log('ciao1');
+// })
+//
+// var btnAnulla = document.getElementById('my-cancel');
+// btnAnulla.addEventListener('click', function () {
+//   console.log('ciao2');
+// })
 
-var btnCrea = document.getElementById('my-create');
-btnCrea.addEventListener('click', function () {
-  console.log('ciao1');
-})
 
-var btnAnulla = document.getElementById('my-cancel');
-btnAnulla.addEventListener('click', function () {
-  console.log('ciao2');
-})
+
+//bottoni: versione bonus (fatto la ricerca su internet)
+
+function myFunctionCrea() {
+  var myOptions = document.getElementById("hi");
+  if (myOptions.style.visibility === "hidden") {
+    myOptions.style.visibility = "visible";
+  } else {
+    myOptions.style.visibility = "visible";
+  }
+}
+
+function myFunctionAnulla() {
+  var myOptions = document.getElementById("hi");
+  if (myOptions.style.visibility === "visible") {
+    myOptions.style.visibility = "hidden";
+  } else {
+    myOptions.style.visibility = "hidden";
+  }
+}
+
+// math random
+
+var minCar = 1;
+var maxCar = 10;
+var minTreno = 90000;
+var maxTreno = 100000;
+
+var numCar = Math.floor(Math.random()*(maxCar - minCar + 1) + minCar);
+var numTreno = Math.floor(Math.random()*(maxTreno - minTreno + 1) + minTreno);
+
+console.log(numCar, numTreno);
+
+//valori nel HTML;
+
+//condizioni
+
+if (eta == 'minorenne'){
+  document.getElementById('my-age-tb').innerHTML = 'Minorenne';
+  document.getElementById('my-text-sale-tb').innerHTML =  'Scontato del 20%';
+  document.getElementById('my-price-tb').innerHTML = 'Prezzo: ' + prezzoMinor + ' €';
+} else if (eta == 'over65') {
+  document.getElementById('my-age-tb').innerHTML = 'Senior';
+  document.getElementById('my-text-sale-tb').innerHTML =  'Scontato del 40%';
+  document.getElementById('my-price-tb').innerHTML =   'Prezzo: ' + prezzoOver65 + ' €';
+} else {
+  document.getElementById('my-age-tb').innerHTML = 'Maggiorenne';
+  document.getElementById('my-text-sale-tb').innerHTML =  'Prezzo intero';
+  document.getElementById('my-price-tb').innerHTML =   'Prezzo: ' + prezzoTotale + ' €';
+}
+
+document.getElementById('my-name-tb').innerHTML = nome;
+document.getElementById('my-surname-tb').innerHTML = cognome;
+document.getElementById('my-km-tb').innerHTML = 'km: ' + km;
+
+document.getElementById('my-num-treno-tb').innerHTML = 'Numero treno: ' + numTreno;
+document.getElementById('my-num-car-tb').innerHTML =  'Numero carrozza: ' + numCar;

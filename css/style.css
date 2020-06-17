@@ -6,10 +6,55 @@
   padding:5px;
   }
 
+body, html{
+  width: 100%;
+  height: 100vh;
+  font-family: monospace;
+}
+
+.my-table-box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-table *{
+  /* padding:5px; */
+}
+
+.my-table > *{
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-logo-tb{
+  width: 15%;
+}
+
+.my-text-logo-tb{
+  width: 70%;
+}
+
+.my-age-tb{
+  width: 15%;
+}
+
+.my-table-row.n2 > *{
+  width: calc(100% / 3);
+}
+
+.my-table-row.n3{
+  justify-content: flex-start;
+}
 
 
-
-
+.my-text-sale-tb{
+  width: 80%;
+  }
+.my-price-tb{
+  width: 20%;
+}
   /* griglia */
 
   /* media query */
