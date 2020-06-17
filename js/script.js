@@ -28,39 +28,6 @@ if (eta == 'minorenne'){
   console.log(prezzoTotale);
 }
 
-//bottoni: versione  con add/remove dei classi
-// var btnCrea = document.getElementById('my-create');
-// btnCrea.addEventListener('click', function () {
-//   console.log('ciao1');
-// })
-//
-// var btnAnulla = document.getElementById('my-cancel');
-// btnAnulla.addEventListener('click', function () {
-//   console.log('ciao2');
-// })
-
-
-
-//bottoni: versione bonus (fatto la ricerca su internet)
-
-function myFunctionCrea() {
-  var myOptions = document.getElementById("my-table-box");
-  if (myOptions.style.opacity === "0") {
-    myOptions.style.opacity = "1";
-  } else {
-    myOptions.style.opacity = "1";
-  }
-}
-
-function myFunctionAnulla() {
-  var myOptions = document.getElementById("my-table-box");
-  if (myOptions.style.opacity === "1") {
-    myOptions.style.opacity = "0";
-  } else {
-    myOptions.style.opacity = "0";
-  }
-}
-
 // math random
 
 var minCar = 1;
@@ -73,27 +40,58 @@ var numTreno = Math.floor(Math.random()*(maxTreno - minTreno + 1) + minTreno);
 
 console.log(numCar, numTreno);
 
-//valori nel HTML;
+// bottoni: versione  con add/remove dei classi
+var btnCrea = document.getElementById('my-create');
+btnCrea.addEventListener('click', function () {
 
-//condizioni
+  document.getElementById('my-table-box').style.opacity = "1";
 
-if (eta == 'minorenne'){
-  document.getElementById('my-age-tb').innerHTML = 'Minorenne';
-  document.getElementById('my-text-sale-tb').innerHTML =  'Scontato del 20%';
-  document.getElementById('my-price-tb').innerHTML = 'Prezzo: ' + prezzoMinor + ' €';
-} else if (eta == 'over65') {
-  document.getElementById('my-age-tb').innerHTML = 'Senior';
-  document.getElementById('my-text-sale-tb').innerHTML =  'Scontato del 40%';
-  document.getElementById('my-price-tb').innerHTML =   'Prezzo: ' + prezzoOver65 + ' €';
-} else {
-  document.getElementById('my-age-tb').innerHTML = 'Maggiorenne';
-  document.getElementById('my-text-sale-tb').innerHTML =  'Prezzo intero';
-  document.getElementById('my-price-tb').innerHTML =   'Prezzo: ' + prezzoTotale + ' €';
-}
+  if (eta == 'minorenne'){
+    document.getElementById('my-age-tb').innerHTML = 'Minorenne';
+    document.getElementById('my-text-sale-tb').innerHTML =  'Scontato del 20%';
+    document.getElementById('my-price-tb').innerHTML = 'Prezzo: ' + prezzoMinor + ' €';
+  } else if (eta == 'over65') {
+    document.getElementById('my-age-tb').innerHTML = 'Senior';
+    document.getElementById('my-text-sale-tb').innerHTML =  'Scontato del 40%';
+    document.getElementById('my-price-tb').innerHTML =   'Prezzo: ' + prezzoOver65 + ' €';
+  } else {
+    document.getElementById('my-age-tb').innerHTML = 'Maggiorenne';
+    document.getElementById('my-text-sale-tb').innerHTML =  'Prezzo intero';
+    document.getElementById('my-price-tb').innerHTML =   'Prezzo: ' + prezzoTotale + ' €';
+  }
 
-document.getElementById('my-name-tb').innerHTML = 'Nome: ' + nome;
-document.getElementById('my-surname-tb').innerHTML = 'Cognome: ' + cognome;
-document.getElementById('my-km-tb').innerHTML = 'km: ' + km;
+  document.getElementById('my-name-tb').innerHTML = 'Nome: ' + nome;
+  document.getElementById('my-surname-tb').innerHTML = 'Cognome: ' + cognome;
+  document.getElementById('my-km-tb').innerHTML = 'km: ' + km;
 
-document.getElementById('my-num-treno-tb').innerHTML = 'Numero treno: ' + numTreno;
-document.getElementById('my-num-car-tb').innerHTML =  'Numero carrozza: ' + numCar;
+  document.getElementById('my-num-treno-tb').innerHTML = 'Numero treno: ' + numTreno;
+  document.getElementById('my-num-car-tb').innerHTML =  'Numero carrozza: ' + numCar;
+})
+
+var btnAnulla = document.getElementById('my-cancel');
+btnAnulla.addEventListener('click', function () {
+  document.getElementById('my-table-box').style.opacity = "0";
+})
+
+
+
+//bottoni: versione bonus (fatto la ricerca su internet)
+
+// function myFunctionCrea() {
+//   var myOptions = document.getElementById("my-table-box");
+//   if (myOptions.style.opacity === "0") {
+//     myOptions.style.opacity = "1";
+//
+//   } else {
+//     myOptions.style.opacity = "1";
+//   }
+// }
+//
+// function myFunctionAnulla() {
+//   var myOptions = document.getElementById("my-table-box");
+//   if (myOptions.style.opacity === "1") {
+//     myOptions.style.opacity = "0";
+//   } else {
+//     myOptions.style.opacity = "0";
+//   }
+// }
