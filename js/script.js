@@ -21,9 +21,21 @@ console.log(eta);
 // condizioni
 
 if (eta == 'minorenne'){
-  console.log('ciao1');
+  console.log(prezzoMinor);
 } else if (eta == 'over65') {
-  console.log('ciao2');
+  console.log(prezzoOver65);
 } else {
-  console.log('ciao3');
+  console.log(prezzoTotale);
 }
+
+// bottoni
+
+var btnCrea = document.getElementById('my-create');
+btnCrea.addEventListener('click', function () {
+  console.log('ciao1');
+})
+
+var btnAnulla = document.getElementById('my-cancel');
+btnAnulla.addEventListener('click', function () {
+  console.log('ciao2');
+})
