@@ -44,20 +44,20 @@ if (eta == 'minorenne'){
 //bottoni: versione bonus (fatto la ricerca su internet)
 
 function myFunctionCrea() {
-  var myOptions = document.getElementById("hi");
-  if (myOptions.style.visibility === "hidden") {
-    myOptions.style.visibility = "visible";
+  var myOptions = document.getElementById("my-table-box");
+  if (myOptions.style.opacity === "0") {
+    myOptions.style.opacity = "1";
   } else {
-    myOptions.style.visibility = "visible";
+    myOptions.style.opacity = "1";
   }
 }
 
 function myFunctionAnulla() {
-  var myOptions = document.getElementById("hi");
-  if (myOptions.style.visibility === "visible") {
-    myOptions.style.visibility = "hidden";
+  var myOptions = document.getElementById("my-table-box");
+  if (myOptions.style.opacity === "1") {
+    myOptions.style.opacity = "0";
   } else {
-    myOptions.style.visibility = "hidden";
+    myOptions.style.opacity = "0";
   }
 }
 
@@ -91,8 +91,8 @@ if (eta == 'minorenne'){
   document.getElementById('my-price-tb').innerHTML =   'Prezzo: ' + prezzoTotale + ' €';
 }
 
-document.getElementById('my-name-tb').innerHTML = nome;
-document.getElementById('my-surname-tb').innerHTML = cognome;
+document.getElementById('my-name-tb').innerHTML = 'Nome: ' + nome;
+document.getElementById('my-surname-tb').innerHTML = 'Cognome: ' + cognome;
 document.getElementById('my-km-tb').innerHTML = 'km: ' + km;
 
 document.getElementById('my-num-treno-tb').innerHTML = 'Numero treno: ' + numTreno;

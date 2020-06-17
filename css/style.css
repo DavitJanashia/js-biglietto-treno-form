@@ -2,8 +2,8 @@
   box-sizing: border-box;
   margin:0;
   /* DEBUG:  */
-  border:1px solid black;
-  padding:5px;
+  /* border:1px solid black; */
+  /* padding:5px; */
   }
 
 body, html{
@@ -17,15 +17,31 @@ body, html{
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.5s;
 }
-.my-table *{
+.my-table{
   /* padding:5px; */
+  border:1px solid black;
 }
+
+.my-table *{
+
+}
+
+.my-table > * > *{
+  /* padding:5px; */
+  border-left:1px solid black;
+  border-right:1px solid black;
+  padding:5px;
+}
+
 
 .my-table > *{
   width: 800px;
   display: flex;
   justify-content: space-between;
+  border-top:1px solid black;
+  border-bottom:1px solid black;
 }
 
 .my-logo-tb{
@@ -46,6 +62,10 @@ body, html{
 
 .my-table-row.n3{
   justify-content: flex-start;
+}
+
+.my-num-treno-tb{
+  margin-right: 30px;
 }
 
 
